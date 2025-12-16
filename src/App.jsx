@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import Footer from './frontend/footer/Footer'
-import './App.css'
+import Hero from './frontend/hero/Hero'
 
 function App() {
  
@@ -8,6 +8,7 @@ function App() {
   return (
     <>
       Autumn portfolio
+      <Hero />
       <Footer />
     </>
   )
