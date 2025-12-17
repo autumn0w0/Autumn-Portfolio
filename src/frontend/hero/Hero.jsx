@@ -1,13 +1,14 @@
-import {React} from 'react'
-import Home from '../components/ui/spline-module/box-hover'
+import Background from "../components/reusable-components/Background";
 
 function Hero() {
-    return(
-        <div className="w-full h-full p-auto m-10 flex-1 justify-center items-center">
-            <Home />
-            Hero section
-        </div>
-    )
+  return (
+    <div className="relative w-auto h-screen overflow-hidden">
+      <Background />
+      <div className="relative z-10 flex items-center justify-center h-full">
+        <h1 className="text-white text-5xl">Hero Content</h1>
+      </div>
+    </div>
+  );
 }
 
 export default Hero;
