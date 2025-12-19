@@ -2,7 +2,7 @@ import Background from "../components/reusable-components/Background";
 
 function Hero() {
   return (
-    <div className="relative w-auto h-screen overflow-hidden">
+    <div className="relative w-auto h-screen">
       <Background />
       <div className="relative z-10 flex items-end pb-24 md:pb-32 lg:pb-40 h-full px-8 md:px-16 lg:px-24">
         <div className="w-full max-w-7xl mx-auto">
