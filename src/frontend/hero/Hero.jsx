@@ -1,4 +1,7 @@
 import Background from "../components/reusable-components/Background";
+import Testimonials from "../testimonials/Testimonials";
+import Experience from "../experience/Experience";
+import React from "react";
 
 function Hero() {
   return (
@@ -7,6 +10,8 @@ function Hero() {
       <div className="relative z-10 flex items-center justify-center h-full">
         <h1 className="text-white text-5xl">Hero Content</h1>
       </div>
+      <Testimonials />
+      <Experience />
     </div>
   );
 }

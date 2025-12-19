@@ -33,7 +33,7 @@ export default function Footer() {
   };
 
   return (
-    <footer id="footer" className="w-full bg-black text-white py-8 px-6">
+    <footer id="footer" className="w-full bg-black text-white py-8 px-6 mt-50">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
         
         {/* Left: About Section */}
