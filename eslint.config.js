@@ -22,6 +22,12 @@ export default defineConfig([
         sourceType: 'module',
       },
     },
+    compilerOptions: {
+      "baseUrl": ".",
+      "paths": {
+        "@/*": ["src/frontend"]
+      }
+    },
     rules: {
       'no-unused-vars': ['error', { varsIgnorePattern: '^[A-Z_]' }],
     },
