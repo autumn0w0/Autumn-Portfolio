@@ -12,25 +12,25 @@ function Project() {
     {
       id: 1,
       title: 'Rala.ai',
-      description: 'AI-powered design system creation and code generation.',
+      description: 'An AI-powered esports coach that analyzes gameplay in real time to deliver data-driven insights and performance improvements.',
       image: ralaImg,
-      link: 'https://github.com/yourusername/aether',
+      link: 'https://www.rala.ai/',
       gridClass: 'md:col-span-2 md:row-span-2 min-h-[400px]' // Large box
     },
     {
       id: 2,
       title: 'PulseBoard.ai',
-      description: '3D product visualization with interactive elements.',
+      description: 'A data-to-dashboard platform that transforms raw datasets into interactive, insight-driven visualizations using AI.',
       image: pulseboardImg,
-      link: 'https://github.com/yourusername/product-showcase',
+      link: 'https://github.com/autumn0w0/PulseBoard-AI-Agent',
       gridClass: 'md:col-span-1 md:row-span-1 min-h-[300px]' // Medium box
     },
     {
       id: 3,
       title: 'Pneumonia Classification on TPU',
-      description: 'Medical AI for pneumonia detection using TPU acceleration.',
+      description: 'A deep learning system for pneumonia detection from chest X-rays, trained and optimized on TPU for high-performance medical image classification.',
       image: pneumoniaImg,
-      link: 'https://github.com/yourusername/auto-spares',
+      link: 'https://github.com/autumn0w0/Pneumonia-Classification-on-TPU',
       gridClass: 'md:col-span-1 md:row-span-2 min-h-[400px]' // Tall box
     },
     {
