@@ -1,6 +1,7 @@
 // import Background from "../components/reusable-components/Background";
 import SkillsSection from "./Skill";
 import Project from "./Project";
+import Testimonials from "./Testimonials";
 
 function Hero() {
   return (
@@ -49,6 +50,9 @@ function Hero() {
 
       {/* Projects Section */}
       <Project />
+
+      {/* Testimonials Section */}
+      <Testimonials />
     </>
   );
 }
