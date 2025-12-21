@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import profileImg from '../images/aboutme/profileimg.png';
 import deskImg from '../images/aboutme/tenor.gif';
 
 function AboutMe() {
+  const [isHoveringDesk, setIsHoveringDesk] = useState(false);
+
   const educationData = [
     {
       degree: 'B.Tech Computer Science with Data Science Specialization',
@@ -224,16 +226,46 @@ function AboutMe() {
               </div>
             </div>
 
-            {/* Desk Setup GIF with refined gradient overlay */}
-            <div className="group relative rounded-3xl overflow-hidden h-[360px] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-purple-500/20">
-              <div className="absolute inset-0 bg-gradient-to-br from-amber-600/15 via-transparent to-purple-600/15"></div>
-              <img 
-                src={deskImg} 
-                alt="Desk Setup"
-                className="w-full h-full object-cover"
-              />
-              {/* Hover Glow Effect */}
-              <div className="absolute inset-0 bg-gradient-to-br from-purple-500/0 to-pink-500/0 group-hover:from-purple-500/10 group-hover:to-pink-500/10 transition-all duration-300"></div>
+            {/* Desk Setup GIF - PROJECT STYLE HOVER */}
+            <div 
+              className="relative group overflow-hidden rounded-3xl h-[360px] cursor-pointer bg-gray-900 transition-all duration-300"
+              onMouseEnter={() => setIsHoveringDesk(true)}
+              onMouseLeave={() => setIsHoveringDesk(false)}
+            >
+              {/* Image */}
+              <div className="absolute inset-0">
+                <img 
+                  src={deskImg} 
+                  alt="Desk Setup"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                {/* Overlay - same as projects */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300"></div>
+              </div>
+
+              {/* Content - appears on hover (desktop) or always visible (mobile) */}
+              <div 
+                className={`absolute inset-x-0 bottom-0 p-6 transform transition-all duration-300 ${
+                  isHoveringDesk 
+                    ? 'translate-y-0 opacity-100' 
+                    : 'md:translate-y-4 md:opacity-0 translate-y-0 opacity-100'
+                }`}
+              >
+                <div className="bg-black/60 backdrop-blur-md border border-white/30 rounded-xl p-4">
+                  <h3 className="text-white text-lg md:text-xl font-semibold mb-2">
+                    Why Snorlax?
+                  </h3>
+                  <p className="text-white/90 text-sm mb-2">
+                    Snorlax has been my favorite Pokémon since childhood. There's something about its calm, steady nature that I've always connected with—it stays relaxed, focused, and doesn't overcomplicate things.
+                  </p>
+                  <p className="text-white/90 text-sm">
+                    I relate to that mindset a lot. I like working at my own pace, staying focused, enjoying simple things like good food and proper rest, and not stressing over noise that doesn't matter. For me, Snorlax is a reminder to stay calm, do the work, and let results speak.
+                  </p>
+                </div>
+              </div>
+
+              {/* Hover Border Glow - same as projects */}
+              <div className="absolute inset-0 rounded-3xl border-2 border-transparent group-hover:border-purple-500/50 transition-all duration-300 pointer-events-none"></div>
             </div>
           </div>
         </div>
