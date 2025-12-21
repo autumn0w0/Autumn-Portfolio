@@ -1,8 +1,9 @@
-// Hero.jsx
+import React from "react";
 import SkillsSection from "./Skill";
 import Project from "./Project";
 import AboutMe from "./Aboutme";
 import Testimonials from "./Testimonials";
+import Experience from "./Experience"; // Add this import
 
 function Hero() {
   return (
@@ -48,6 +49,9 @@ function Hero() {
       
       {/* Skills Section */}
       <SkillsSection />
+
+      {/* Experience Section */}
+      <Experience />
 
       {/* Projects Section */}
       <Project />
