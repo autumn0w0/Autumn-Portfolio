@@ -1,6 +1,6 @@
 import React from 'react';
-import profileImg from '../images/profileimg.png';
-import deskImg from '../images/tenor.gif';
+import profileImg from '../images/aboutme/profileimg.png';
+import deskImg from '../images/aboutme/tenor.gif';
 
 function AboutMe() {
   const educationData = [

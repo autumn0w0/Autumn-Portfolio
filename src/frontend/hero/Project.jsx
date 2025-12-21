@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import ralaImg from '../images/ralasnorlax.png';
-import pulseboardImg from '../images/pulseboardsnorlax.png';
-import pneumoniaImg from '../images/Pneumoniasnorlax.png';
-import judicioImg from '../images/judgewalasnorlax.png';
-import skillbridgeImg from '../images/skillbridgesnorlax.png';
+import ralaImg from '../images/projects/ralasnorlax.png';
+import pulseboardImg from '../images/projects/pulseboardsnorlax.png';
+import pneumoniaImg from '../images/projects/Pneumoniasnorlax.png';
+import judicioImg from '../images/projects/judgewalasnorlax.png';
+import skillbridgeImg from '../images/projects/skillbridgesnorlax.png';
 
 function Project() {
   const [hoveredProject, setHoveredProject] = useState(null);

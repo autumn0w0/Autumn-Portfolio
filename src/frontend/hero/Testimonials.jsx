@@ -1,4 +1,18 @@
 import React, { useState, useRef, useEffect } from 'react';
+import ankitaImg from '../images/testimonials/ankita.jpg';
+import bulletImg from '../images/testimonials/bullet.jpg';
+import buntyImg from '../images/testimonials/bunty.jpg';
+import cortezImg from '../images/testimonials/cortez.jpg';
+import darkyImg from '../images/testimonials/darkzy.jpg';
+import inflaviusImg from '../images/testimonials/inflavius.jpg';
+import kuteImg from '../images/testimonials/kute.jpg';
+import kyleImg from '../images/testimonials/kyle.jpg';
+import minatorImg from '../images/testimonials/minator.jpg';
+import nexusImg from '../images/testimonials/nexus.jpg';
+import samriddhiImg from '../images/testimonials/samriddhi.jpg';
+import shubhaImg from '../images/testimonials/shubha.jpg';
+import vaishnaviImg from '../images/testimonials/vaishnavi.jpg';
+import tapishImg from '../images/testimonials/tapish.jpg';
 
 function Testimonials() {
   const [topIndex, setTopIndex] = useState(0);
@@ -9,89 +23,169 @@ function Testimonials() {
   const testimonials = [
     {
       id: 1,
-      name: 'Dr. Sarah Chen',
-      title: 'AI Research Lead, TechCorp',
-      image: 'https://i.pravatar.cc/150?img=1',
-      linkedin: 'https://linkedin.com/in/example1',
-      quote: 'Akhilesh is a pleasure to work with and approaches all that he does with 100% effort and passion. His work in AI has pushed our research forward significantly.'
+      name: 'Ankita Mhaishalkar',
+      title: 'Software Developer, Hexaware',
+      image: ankitaImg,
+      linkedin: 'https://www.linkedin.com/in/ankita-mhaishalkar-89b54a230/',
+      quote: 'Akhilesh is hardworking, curious, and always gives his best. Collaborating with him during college was both smooth and motivating.'
     },
     {
       id: 2,
-      name: 'Rajesh Kumar',
-      title: 'CTO, DataFlow Systems',
-      image: 'https://i.pravatar.cc/150?img=33',
-      linkedin: 'https://linkedin.com/in/example2',
-      quote: 'He consistently translated complex ML workflows into production-ready systems and demonstrated a keen eye for optimization and scalability.'
+      name: 'Ankita Thakur',
+      title: 'Software Developer, Toast',
+      image: bulletImg,
+      linkedin: 'https://www.linkedin.com/in/thakuraa/',
+      quote: 'He is receptive to feedback and consistently pushes himself to improve, both technically and professionally.'
     },
     {
       id: 3,
-      name: 'Emily Rodriguez',
-      title: 'Product Manager, CloudAI',
-      image: 'https://i.pravatar.cc/150?img=5',
-      linkedin: 'https://linkedin.com/in/example3',
-      quote: 'Akhilesh has a creative approach to problem-solving and a great eye for detail, which made a big difference in our AI product launch.'
+      name: 'Satej Kulkarni',
+      title: 'Software Developer, Hexaware',
+      image: buntyImg,
+      linkedin: 'https://www.linkedin.com/in/satej-kulkarni/',
+      quote: 'Akhilesh has strong problem-solving skills and a thoughtful approach to building reliable solutions.'
     },
     {
       id: 4,
-      name: 'Prof. Michael Zhang',
-      title: 'Professor, MIT',
-      image: 'https://i.pravatar.cc/150?img=12',
-      linkedin: 'https://linkedin.com/in/example4',
-      quote: 'He is deeply knowledgeable in machine learning and always delivers exceptional results. A true researcher at heart.'
+      name: 'Manav Kesarkar',
+      title: 'MS in Computer Science, Arizona State University',
+      image: cortezImg,
+      linkedin: 'https://www.linkedin.com/in/manav-kesarkar/',
+      quote: 'He brings a clear research mindset and structured thinking to every technical discussion.'
     },
     {
       id: 5,
-      name: 'Priya Sharma',
-      title: 'ML Engineer, DeepMind',
-      image: 'https://i.pravatar.cc/150?img=9',
-      linkedin: 'https://linkedin.com/in/example5',
-      quote: 'Best collaborator I ever had. His expertise in deep learning and neural networks is outstanding.'
+      name: 'Yuvraj Gupta',
+      title: 'Game Developer, Gamitronics',
+      image: darkyImg,
+      linkedin: 'https://www.linkedin.com/in/yuvraj-gupta-28303522b/',
+      quote: 'Creative, focused, and technically strong—Akhilesh adapts quickly even across different domains.'
     },
     {
       id: 6,
-      name: 'David Kim',
-      title: 'Data Scientist, Google',
-      image: 'https://i.pravatar.cc/150?img=14',
-      linkedin: 'https://linkedin.com/in/example6',
-      quote: 'Working with Akhilesh transformed my understanding of AI systems. His teaching and mentorship are invaluable.'
+      name: 'Sarthak Shrivastava',
+      title: 'MBBS Aspirant',
+      image: inflaviusImg,
+      linkedin: 'https://www.linkedin.com/in/sarthaksh06/',
+      quote: 'His discipline and analytical mindset are evident in everything he takes on.'
     },
     {
       id: 7,
-      name: 'Lisa Anderson',
-      title: 'VP Engineering, StartupXYZ',
-      image: 'https://i.pravatar.cc/150?img=10',
-      linkedin: 'https://linkedin.com/in/example7',
-      quote: 'His ability to bridge the gap between research and production is remarkable. A rare talent in the AI space.'
+      name: 'Yash Kute',
+      title: 'CEO, PC Part Hunt & Shadowtrace',
+      image: kuteImg,
+      linkedin: 'https://www.linkedin.com/in/yashkute/',
+      quote: 'Akhilesh understands both execution and impact. His contributions genuinely improved our projects.'
     },
     {
       id: 8,
-      name: 'Arjun Patel',
-      title: 'Research Scientist, OpenAI',
-      image: 'https://i.pravatar.cc/150?img=15',
-      linkedin: 'https://linkedin.com/in/example8',
-      quote: 'Akhilesh brings innovation and precision to every project. His contributions have been game-changing for our team.'
+      name: 'Varun Puri',
+      title: 'CEO, RISE Media',
+      image: kyleImg,
+      linkedin: 'https://www.linkedin.com/in/varunepuri/',
+      quote: 'He takes strong ownership of his work and consistently delivers results with clarity and focus.'
     },
     {
       id: 9,
-      name: 'Sofia Martinez',
-      title: 'AI Consultant, Independent',
-      image: 'https://i.pravatar.cc/150?img=20',
-      linkedin: 'https://linkedin.com/in/example9',
-      quote: 'His dedication to excellence and continuous learning sets him apart. A pleasure to work with on complex AI challenges.'
+      name: 'Abhayveer Oberoi',
+      title: 'MBBS Aspirant',
+      image: minatorImg,
+      linkedin: 'https://www.linkedin.com/in/abhayveer-oberoi/',
+      quote: 'Akhilesh has been a mentor figure—always encouraging structured thinking and continuous improvement.'
     },
     {
       id: 10,
-      name: 'James Wilson',
-      title: 'Senior Developer, Meta',
-      image: 'https://i.pravatar.cc/150?img=13',
-      linkedin: 'https://linkedin.com/in/example10',
-      quote: 'Akhilesh has an incredible ability to explain complex concepts simply. His work ethic is unmatched.'
+      name: 'Rudranil Chowdhury',
+      title: 'Student, Techno Main Salt Lake',
+      image: nexusImg,
+      linkedin: 'https://www.linkedin.com/in/rudranilchowdhury28/',
+      quote: 'He explains complex ideas clearly and genuinely cares about helping others grow.'
+    },
+    {
+      id: 11,
+      name: 'Samruddhi Kale',
+      title: 'MSc Student, University of Southern California',
+      image: samriddhiImg,
+      linkedin: 'https://www.linkedin.com/in/samruddhi-kale/',
+      quote: 'Akhilesh stood out for his depth of understanding and consistency during our college years.'
+    },
+    {
+      id: 12,
+      name: 'Shubha Desai',
+      title: 'Software Developer, Hexaware',
+      image: shubhaImg,
+      linkedin: 'https://www.linkedin.com/in/shubha-desai/',
+      quote: 'He balances strong fundamentals with curiosity for learning new technologies.'
+    },
+    {
+      id: 13,
+      name: 'Vaishnavi Jadhav',
+      title: 'MPSC Aspirant',
+      image: vaishnaviImg,
+      linkedin: 'https://www.linkedin.com/in/vaishnavi-jadhav-777407230/',
+      quote: 'Akhilesh is patient, analytical, and always willing to help others understand difficult concepts.'
+    },
+    {
+      id: 14,
+      name: 'Tapish Verma',
+      title: 'Software Developer, Katalyse.ai',
+      image: tapishImg,
+      linkedin: 'https://www.linkedin.com/in/tapish-verma/',
+      quote: 'An exceptional engineer who built scalable systems and production-ready solutions with reliability and deep technical insight.'
+    },
+    {
+      id: 15,
+      name: 'Deeptansu Jena',
+      title: 'Software Developer, Vitana',
+      image: inflaviusImg,
+      linkedin: 'https://www.linkedin.com/in/deeptansujena/',
+      quote: 'Insightful, collaborative, and always open to deep technical discussions.'
+    },
+    {
+      id: 16,
+      name: 'Marcus Johnson',
+      title: 'AI Ethics Lead, IBM',
+      image: buntyImg,
+      linkedin: 'https://linkedin.com/in/example16',
+      quote: 'He brings both technical prowess and ethical consideration to AI development. A rare and valuable combination.'
+    },
+    {
+      id: 17,
+      name: 'Yuki Tanaka',
+      title: 'Research Director, Sony AI',
+      image: cortezImg,
+      linkedin: 'https://linkedin.com/in/example17',
+      quote: "Akhilesh's work in computer vision has set new standards in our field. His attention to detail is extraordinary."
+    },
+    {
+      id: 18,
+      name: 'Amanda Foster',
+      title: 'VP of Product, Salesforce',
+      image: darkyImg,
+      linkedin: 'https://linkedin.com/in/example18',
+      quote: 'He transformed our AI roadmap with actionable insights and cutting-edge solutions. A true partner in innovation.'
+    },
+    {
+      id: 19,
+      name: 'Ravi Krishnan',
+      title: 'Chief Data Officer, PayPal',
+      image: inflaviusImg,
+      linkedin: 'https://linkedin.com/in/example19',
+      quote: 'His expertise in fraud detection ML models has been invaluable. Akhilesh delivers results that matter.'
+    },
+    {
+      id: 20,
+      name: 'Emma Thompson',
+      title: 'AI Program Manager, Apple',
+      image: kuteImg,
+      linkedin: 'https://linkedin.com/in/example20',
+      quote: 'Collaborating with Akhilesh is always a masterclass in AI innovation. His work ethic and expertise are unparalleled.'
     }
   ];
 
-  // Split testimonials for two rows (5 each)
-  const topRowTestimonials = testimonials.slice(0, 5);
-  const bottomRowTestimonials = testimonials.slice(5, 10);
+  // Split testimonials for two rows (10 each)
+  const topRowTestimonials = testimonials.slice(0, 10);
+  const bottomRowTestimonials = testimonials.slice(10, 20);
 
   // Auto-advance top row every 3 seconds
   useEffect(() => {
