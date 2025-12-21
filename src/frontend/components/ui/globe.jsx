@@ -17,19 +17,33 @@ export function Globe({ globeConfig = {}, data = [] }) {
   const globe = useMemo(() => new ThreeGlobe(), []);
 
   const defaultProps = {
-    pointSize: 1,
-    atmosphereColor: "#ffffff",
+    pointSize: 1.2,
+
+    // Atmosphere → brighter, visible glow
+    atmosphereColor: "#EAF7F3", // bright soft mint
     showAtmosphere: true,
-    atmosphereAltitude: 0.1,
-    polygonColor: "rgba(255,255,255,0.7)",
-    globeColor: "#1d072e",
-    emissive: "#000000",
-    emissiveIntensity: 0.1,
-    shininess: 0.9,
-    arcTime: 2000,
-    arcLength: 0.9,
+    atmosphereAltitude: 0.18,
+
+    // Polygons → clearer and brighter
+    polygonColor: "rgba(234, 247, 243, 0.75)",
+
+    // Globe body → brighter Snorlax-inspired teal
+    globeColor: "#6FB7B7",
+
+    // Emissive → visible but classy glow
+    emissive: "#1E6F7A",
+    emissiveIntensity: 0.25,
+
+    // More shine for depth
+    shininess: 0.85,
+
+    // Motion
+    arcTime: 1800,
+    arcLength: 0.95,
+
     rings: 1,
-    maxRings: 3,
+    maxRings: 2,
+
     ...globeConfig,
   };
 

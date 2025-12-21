@@ -29,19 +29,8 @@ export const Timeline = ({ data }) => {
   return (
     <div
       ref={containerRef}
-      className="w-full bg-black font-sans md:px-10"
+      className="w-full bg-transparent font-sans md:px-10"
     >
-      {/* Header */}
-      <div className="max-w-7xl mx-auto py-20 px-4 md:px-8 lg:px-10">
-        <h2 className="text-lg md:text-4xl mb-4 text-black dark:text-white max-w-4xl">
-          Changelog from my journey
-        </h2>
-        <p className="text-neutral-700 dark:text-neutral-300 text-sm md:text-base max-w-sm">
-          I&apos;ve been working on Aceternity for the past 2 years. Here&apos;s a
-          timeline of my journey.
-        </p>
-      </div>
-
       {/* Timeline */}
       <div ref={lineRef} className="relative max-w-7xl mx-auto pb-20">
         {data.map((item, index) => (
@@ -91,3 +80,53 @@ export const Timeline = ({ data }) => {
     </div>
   );
 };
+
+// Demo component
+export default function App() {
+  const timelineData = [
+    {
+      title: "2023",
+      content: (
+        <div>
+          <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
+            Started the journey with a vision to create something amazing.
+          </p>
+          <div className="grid grid-cols-2 gap-4">
+            <div className="h-20 bg-gradient-to-br from-neutral-200 dark:from-neutral-900 to-neutral-100 dark:to-neutral-800 rounded-lg"></div>
+            <div className="h-20 bg-gradient-to-br from-neutral-200 dark:from-neutral-900 to-neutral-100 dark:to-neutral-800 rounded-lg"></div>
+          </div>
+        </div>
+      ),
+    },
+    {
+      title: "2024",
+      content: (
+        <div>
+          <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
+            Grew the team and launched multiple successful projects.
+          </p>
+          <div className="grid grid-cols-2 gap-4">
+            <div className="h-20 bg-gradient-to-br from-neutral-200 dark:from-neutral-900 to-neutral-100 dark:to-neutral-800 rounded-lg"></div>
+            <div className="h-20 bg-gradient-to-br from-neutral-200 dark:from-neutral-900 to-neutral-100 dark:to-neutral-800 rounded-lg"></div>
+          </div>
+        </div>
+      ),
+    },
+    {
+      title: "2025",
+      content: (
+        <div>
+          <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-4">
+            Looking forward to new challenges and opportunities ahead.
+          </p>
+        </div>
+      ),
+    },
+  ];
+
+  return (
+    <div className="min-h-screen bg-white dark:bg-neutral-950">
+      <Timeline data={timelineData} />
+    </div>
+  );
+}
