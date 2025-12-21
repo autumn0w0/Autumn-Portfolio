@@ -255,10 +255,10 @@ function AboutMe() {
                   <h3 className="text-white text-lg md:text-xl font-semibold mb-2">
                     Why Snorlax?
                   </h3>
-                  <p className="text-white/90 text-sm mb-2">
+                  <p className="text-white/100 text-sm mb-2">
                     Snorlax has been my favorite Pokémon since childhood. There's something about its calm, steady nature that I've always connected with—it stays relaxed, focused, and doesn't overcomplicate things.
                   </p>
-                  <p className="text-white/90 text-sm">
+                  <p className="text-white/100 text-sm">
                     I relate to that mindset a lot. I like working at my own pace, staying focused, enjoying simple things like good food and proper rest, and not stressing over noise that doesn't matter. For me, Snorlax is a reminder to stay calm, do the work, and let results speak.
                   </p>
                 </div>
