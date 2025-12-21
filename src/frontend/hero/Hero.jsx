@@ -1,6 +1,7 @@
-// import Background from "../components/reusable-components/Background";
+// Hero.jsx
 import SkillsSection from "./Skill";
 import Project from "./Project";
+import AboutMe from "./Aboutme";
 import Testimonials from "./Testimonials";
 
 function Hero() {
@@ -50,6 +51,9 @@ function Hero() {
 
       {/* Projects Section */}
       <Project />
+
+      {/* About Me Section */}
+      <AboutMe />
 
       {/* Testimonials Section */}
       <Testimonials />
