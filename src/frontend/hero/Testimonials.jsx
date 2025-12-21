@@ -18,6 +18,7 @@ import chetanImg from '../images/testimonials/chetan.jpg';
 import prayagImg from '../images/testimonials/prayag.jpg';
 import saranImg from '../images/testimonials/saran.jpg';
 import perkyImg from '../images/testimonials/perky.jpeg';
+import bellImg from '../images/testimonials/bell.jpg';
 
 function Testimonials() {
   const [topIndex, setTopIndex] = useState(0);
@@ -180,11 +181,11 @@ function Testimonials() {
     },
     {
       id: 20,
-      name: 'Emma Thompson',
-      title: 'AI Program Manager, Apple',
-      image: kuteImg,
-      linkedin: 'https://linkedin.com/in/example20',
-      quote: 'Collaborating with Akhilesh is always a masterclass in AI innovation. His work ethic and expertise are unparalleled.'
+      name: 'Ankit Bhattacharjee',
+      title: 'Compensation & Benefits Manager, BEWS APAC',
+      image: bellImg,
+      linkedin: 'https://www.linkedin.com/in/ankitbhattacharjeexk/',
+      quote: 'Akhilesh is thoughtful, disciplined, and approaches decisions with clarity. His ability to learn quickly and apply feedback stands out.'
     }
   ];
 
