@@ -96,7 +96,7 @@ function Testimonials() {
     {
       id: 10,
       name: 'Rudranil Chowdhury',
-      title: 'Student, Techno Main Salt Lake',
+      title: 'SDE Intern, Om Softwares',
       image: nexusImg,
       linkedin: 'https://www.linkedin.com/in/rudranilchowdhury28/',
       quote: 'He explains complex ideas clearly and genuinely cares about helping others grow.'
