@@ -58,6 +58,20 @@ function AboutMe() {
   return (
     <div className="relative w-full bg-transparent min-h-screen py-12 md:py-16 px-4 md:px-8">
       <div className="w-full max-w-7xl mx-auto">
+        {/* Header */}
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-normal mb-4">
+            <span className="text-white">Curiosity Meets</span>
+            <br />
+            <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-purple-600 bg-clip-text text-transparent">
+              Engineering
+            </span>
+          </h2>
+          <p className="text-white/70 text-lg mt-6">
+            My journey, education, and what drives me.
+          </p>
+        </div>
+
         {/* Bento Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           
