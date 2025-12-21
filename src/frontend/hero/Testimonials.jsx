@@ -53,7 +53,7 @@ function Testimonials() {
     {
       id: 4,
       name: 'Manav Kesarkar',
-      title: 'MS in Computer Science, Arizona State University',
+      title: 'MSc Student, Arizona State University',
       image: cortezImg,
       linkedin: 'https://www.linkedin.com/in/manav-kesarkar/',
       quote: 'He brings a clear research mindset and structured thinking to every technical discussion.'
@@ -156,7 +156,7 @@ function Testimonials() {
     },
     {
       id: 17,
-      name: 'CHETAN MANGAL',
+      name: 'Chetan Mangal',
       title: 'Back End Developer, Katalyse.ai',
       image: chetanImg,
       linkedin: 'https://www.linkedin.com/in/chetan-mangal-81518a231/',
