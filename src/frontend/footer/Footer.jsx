@@ -1,11 +1,46 @@
 // frontend/components/Footer.jsx
 import { motion } from "framer-motion";
 import { useState } from "react";
+import {
+  IconMail,
+  IconBrandGithub,
+  IconBrandLinkedin,
+} from "@tabler/icons-react";
 
 export default function Footer() {
-  const [formData, setFormData] = useState({ name: "", email: "", message: "" });
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
   const [status, setStatus] = useState("");
   const BACKEND_URL = "http://localhost:5001/api/contact";
+
+  const openEmail = () => {
+    const email = "akhileshdamke7860@gmail.com";
+    const subject = "Portfolio Contact";
+    const body = "Hi Akhilesh,";
+
+    const mailto = `mailto:${email}?subject=${encodeURIComponent(
+      subject
+    )}&body=${encodeURIComponent(body)}`;
+
+    const gmail = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${encodeURIComponent(
+      subject
+    )}&body=${encodeURIComponent(body)}`;
+
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+    if (isMobile) {
+      window.location.href = mailto;
+    } else {
+      window.location.href = mailto;
+      setTimeout(() => {
+        window.open(gmail, "_blank");
+      }, 300);
+    }
+  };
+
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
@@ -35,13 +70,12 @@ export default function Footer() {
   return (
     <footer id="footer" className="w-full bg-black text-white py-8 px-6 mt-50">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
-        
         {/* Left: About Section */}
         <div>
           <h2 className="text-2xl font-bold mb-4">About Me</h2>
           <p className="text-gray-400 mb-4">
-            © {new Date().getFullYear()} Akhilesh Damke. I worked at Google so hire me.
-            Please leave a message! Thank you for visiting my page :D.
+            © {new Date().getFullYear()} Akhilesh Damke. I worked at Google so
+            hire me. Please leave a message! Thank you for visiting my page :D.
           </p>
           <motion.button
             whileHover={{
@@ -53,6 +87,44 @@ export default function Footer() {
           >
             <a href="#projects">View My Work</a>
           </motion.button>
+
+          {/* Social Links */}
+          <div className="flex items-center gap-4 mt-6">
+            <motion.button
+              type="button"
+              onClick={openEmail}
+              whileHover={{ scale: 1.15 }}
+              whileTap={{ scale: 0.95 }}
+              className="p-3 rounded-full border border-gray-700 text-gray-300 hover:text-white hover:border-white transition"
+              aria-label="Email"
+            >
+              <IconMail size={20} />
+            </motion.button>
+
+            <motion.a
+              whileHover={{ scale: 1.15 }}
+              whileTap={{ scale: 0.95 }}
+              href="https://github.com/autumn0w0"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-3 rounded-full border border-gray-700 text-gray-300 hover:text-white hover:border-white transition"
+              aria-label="GitHub"
+            >
+              <IconBrandGithub size={20} />
+            </motion.a>
+
+            <motion.a
+              whileHover={{ scale: 1.15 }}
+              whileTap={{ scale: 0.95 }}
+              href="https://www.linkedin.com/in/akhilesh-damke/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-3 rounded-full border border-gray-700 text-gray-300 hover:text-white hover:border-white transition"
+              aria-label="LinkedIn"
+            >
+              <IconBrandLinkedin size={20} />
+            </motion.a>
+          </div>
         </div>
 
         {/* Right: Contact Form */}
@@ -65,7 +137,7 @@ export default function Footer() {
               placeholder="Your Name"
               value={formData.name}
               onChange={handleChange}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg outline-none 
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg outline-none 
               transition-all duration-300 ease-in-out
               focus:border-blue-500 focus:ring-2 focus:ring-blue-300
               hover:border-blue-400"
@@ -77,7 +149,7 @@ export default function Footer() {
               placeholder="Your Email"
               value={formData.email}
               onChange={handleChange}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg outline-none 
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg outline-none 
               transition-all duration-300 ease-in-out
               focus:border-blue-500 focus:ring-2 focus:ring-blue-300
               hover:border-blue-400"
@@ -89,7 +161,7 @@ export default function Footer() {
               rows="4"
               value={formData.message}
               onChange={handleChange}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg outline-none 
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg outline-none 
               transition-all duration-300 ease-in-out
               focus:border-blue-500 focus:ring-2 focus:ring-blue-300
               hover:border-blue-400"
