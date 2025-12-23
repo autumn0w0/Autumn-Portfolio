@@ -13,6 +13,12 @@ import samriddhiImg from '../images/testimonials/samriddhi.jpg';
 import shubhaImg from '../images/testimonials/shubha.jpg';
 import vaishnaviImg from '../images/testimonials/vaishnavi.jpg';
 import tapishImg from '../images/testimonials/tapish.jpg';
+import bishalImg from '../images/testimonials/bishal.jpg';
+import chetanImg from '../images/testimonials/chetan.jpg';
+import prayagImg from '../images/testimonials/prayag.jpg';
+import saranImg from '../images/testimonials/saran.jpg';
+import perkyImg from '../images/testimonials/perky.jpeg';
+import bellImg from '../images/testimonials/bell.jpg';
 
 function Testimonials() {
   const [topIndex, setTopIndex] = useState(0);
@@ -48,7 +54,7 @@ function Testimonials() {
     {
       id: 4,
       name: 'Manav Kesarkar',
-      title: 'MS in Computer Science, Arizona State University',
+      title: 'MSc Student, Arizona State University',
       image: cortezImg,
       linkedin: 'https://www.linkedin.com/in/manav-kesarkar/',
       quote: 'He brings a clear research mindset and structured thinking to every technical discussion.'
@@ -137,49 +143,49 @@ function Testimonials() {
       id: 15,
       name: 'Deeptansu Jena',
       title: 'Software Developer, Vitana',
-      image: inflaviusImg,
+      image: perkyImg,
       linkedin: 'https://www.linkedin.com/in/deeptansujena/',
       quote: 'Insightful, collaborative, and always open to deep technical discussions.'
     },
     {
       id: 16,
-      name: 'Marcus Johnson',
-      title: 'AI Ethics Lead, IBM',
-      image: buntyImg,
-      linkedin: 'https://linkedin.com/in/example16',
-      quote: 'He brings both technical prowess and ethical consideration to AI development. A rare and valuable combination.'
+      name: 'Bishal Rijal',
+      title: 'AI Automation Engineer, Katalyse.ai',
+      image: bishalImg,
+      linkedin: 'https://www.linkedin.com/in/bishal-rijal-dmz/',
+      quote: 'Akhilesh is reliable, detail-oriented, and great at breaking down complex problems into practical solutions.'
     },
     {
       id: 17,
-      name: 'Yuki Tanaka',
-      title: 'Research Director, Sony AI',
-      image: cortezImg,
-      linkedin: 'https://linkedin.com/in/example17',
-      quote: "Akhilesh's work in computer vision has set new standards in our field. His attention to detail is extraordinary."
+      name: 'Chetan Mangal',
+      title: 'Back End Developer, Katalyse.ai',
+      image: chetanImg,
+      linkedin: 'https://www.linkedin.com/in/chetan-mangal-81518a231/',
+      quote: 'He has a strong problem-solving mindset and collaborates smoothly across teams.'
     },
     {
       id: 18,
-      name: 'Amanda Foster',
-      title: 'VP of Product, Salesforce',
-      image: darkyImg,
-      linkedin: 'https://linkedin.com/in/example18',
-      quote: 'He transformed our AI roadmap with actionable insights and cutting-edge solutions. A true partner in innovation.'
+      name: 'Saravanan Periyasamy',
+      title: 'Vice President of Engineering, Katalyse.ai',
+      image: saranImg,
+      linkedin: 'https://www.linkedin.com/in/periyasamysaravanan/',
+      quote: 'Akhilesh shows maturity beyond his experience, with strong ownership, clarity of thought, and a constant drive to improve.'
     },
     {
       id: 19,
-      name: 'Ravi Krishnan',
-      title: 'Chief Data Officer, PayPal',
-      image: inflaviusImg,
-      linkedin: 'https://linkedin.com/in/example19',
-      quote: 'His expertise in fraud detection ML models has been invaluable. Akhilesh delivers results that matter.'
+      name: 'Prayag Rai',
+      title: 'AIML Developer, Katalyse.ai',
+      image: prayagImg,
+      linkedin: 'https://www.linkedin.com/in/prayag-rai/',
+      quote: 'Creative, focused, and technically sound—Akhilesh is easy to work with and quick to adapt.'
     },
     {
       id: 20,
-      name: 'Emma Thompson',
-      title: 'AI Program Manager, Apple',
-      image: kuteImg,
-      linkedin: 'https://linkedin.com/in/example20',
-      quote: 'Collaborating with Akhilesh is always a masterclass in AI innovation. His work ethic and expertise are unparalleled.'
+      name: 'Ankit Bhattacharjee',
+      title: 'Compensation & Benefits Manager, BEWS APAC',
+      image: bellImg,
+      linkedin: 'https://www.linkedin.com/in/ankitbhattacharjeexk/',
+      quote: 'Akhilesh is thoughtful, disciplined, and approaches decisions with clarity. His ability to learn quickly and apply feedback stands out.'
     }
   ];
 
