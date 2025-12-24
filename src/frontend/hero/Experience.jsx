@@ -7,17 +7,34 @@ export default function TimelineDemo() {
       title: "Katalyse AI",
       linkedInUrl: "https://www.linkedin.com/company/katalyse-ai/",
       content: (
-        <div>
-          <p className="mb-4 text-xl text-neutral-200">
-            <strong>Software Engineering Intern</strong>
-            <br />Jan 2025 – Oct 2025 · Hybrid · Bangalore
-          </p>
-          <ul className="list-disc pl-5 text-lg text-neutral-300 space-y-2">
-            <li>Developed and maintained backend services supporting AI-driven workflows in a production environment.</li>
-            <li>Built and optimized REST APIs with a focus on scalability, performance, and clean architecture.</li>
-            <li>Collaborated with cross-functional teams to integrate ML models into real-world applications.</li>
-            <li>Improved system reliability through debugging, testing, and performance optimization.</li>
-          </ul>
+        <div className="space-y-6">
+
+          <div>
+            <p className="text-xl text-neutral-200">
+              <strong>Data Engineer</strong>
+              <br />Jul 2025 – Oct 2025 · Hybrid · Bangalore
+            </p>
+            <ul className="list-disc pl-5 text-lg text-neutral-300 mt-2 space-y-1">
+              <li>Designed and maintained data pipelines to support analytics and machine learning workflows.</li>
+              <li>Worked with structured and semi-structured data to enable reliable ingestion and transformation.</li>
+              <li>Collaborated with AI teams to ensure data quality, availability, and consistency across systems.</li>
+              <li>Improved data reliability to support data-driven decision-making across products.</li>
+            </ul>
+          </div>
+
+          <div>
+            <p className="text-xl text-neutral-200">
+              <strong>Software Engineering Intern</strong>
+              <br />Jan 2025 – Jun 2025 · Hybrid · Bangalore
+            </p>
+            <ul className="list-disc pl-5 text-lg text-neutral-300 mt-2 space-y-1">
+              <li>Developed and maintained backend services for AI-driven applications in a production environment.</li>
+              <li>Built and optimized RESTful APIs with a focus on scalability, performance, and clean architecture.</li>
+              <li>Collaborated with ML and product teams to integrate models into real-world systems.</li>
+              <li>Improved system stability through debugging, testing, and performance optimization.</li>
+            </ul>
+          </div>
+
         </div>
       ),
     },
@@ -55,7 +72,7 @@ export default function TimelineDemo() {
 
           <div>
             <p className="text-xl text-neutral-200">
-              <strong>Senior Video Editor (Part-time)</strong>
+              <strong>Senior Video Editor</strong>
               <br />Nov 2021 – May 2022
             </p>
             <ul className="list-disc pl-5 text-lg text-neutral-300 mt-2 space-y-1">
@@ -257,10 +274,10 @@ export default function TimelineDemo() {
   ];
 
   return (
-    <div className="relative w-full mb-0 bg-transparent min-h-screen py-12 md:py-16 px-4 md:px-8">
+    <div className="relative w-full bg-transparent py-20 md:py-32 px-8 md:px-16 lg:px-24">
       <div className="w-full max-w-7xl mx-auto">
-        {/* Header matching AboutMe style */}
-        <div className="text-center mb-16">
+        {/* Header matching Project style with reduced bottom margin */}
+        <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-normal mb-4">
             <span className="text-white">My Professional</span>
             <br />
@@ -268,7 +285,7 @@ export default function TimelineDemo() {
               Journey
             </span>
           </h2>
-          <p className="text-white/70 text-lg mt-6">
+          <p className="text-white/70 text-base md:text-lg mt-6 max-w-3xl mx-auto">
             Experience, roles, and contributions across organizations.
           </p>
         </div>
