@@ -54,8 +54,8 @@ function App() {
             <Hero />
           </div>
 
-          {/* 👇 All Sections with unified spacing */}
-          <section className="space-y-32">
+          {/* 👇 All Sections with reduced spacing */}
+          <section className="space-y-16">
             <div ref={skillsRef}>
               <SkillsSection />
             </div>
