@@ -1,7 +1,14 @@
 import { FloatingNav } from "../components/ui/floating-navbar";
-import { IconHome, IconMessage, IconUser } from "@tabler/icons-react";
+import { 
+  IconHome, 
+  IconUser, 
+  IconCode, 
+  IconBriefcase, 
+  IconRocket,
+  IconStar
+} from "@tabler/icons-react";
 
-export default function Navbar({sections}) {
+export default function Navbar({ sections }) {
   const navItems = [
     {
       name: "Home",
@@ -14,15 +21,26 @@ export default function Navbar({sections}) {
       icon: <IconUser className="h-5 w-5" />,
     },
     {
-      name: "Contact",
-      ref: sections.contact,
-      icon: <IconMessage className="h-5 w-5" />,
+      name: "Skills",
+      ref: sections.skills,
+      icon: <IconCode className="h-5 w-5" />,
+    },
+    {
+      name: "Experience",
+      ref: sections.experience,
+      icon: <IconBriefcase className="h-5 w-5" />,
+    },
+    {
+      name: "Projects",
+      ref: sections.projects,
+      icon: <IconRocket className="h-5 w-5" />,
+    },
+    {
+      name: "Testimonials",
+      ref: sections.testimonials,
+      icon: <IconStar className="h-5 w-5" />,
     },
   ];
 
-  return (
-    <div className="sticky top-0 z-50 flex justify-center">
-      <FloatingNav navItems={navItems} />
-    </div>
-  );
+  return <FloatingNav navItems={navItems} />;
 }
