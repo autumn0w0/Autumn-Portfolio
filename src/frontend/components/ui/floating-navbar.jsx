@@ -6,7 +6,8 @@ export const FloatingNav = ({ navItems, className }) => {
   const scrollToSection = (ref) => {
     if (!ref?.current) return;
 
-    const y = ref.current.getBoundingClientRect().top + window.scrollY;
+    const navbarHeight = 100; // Adjust this based on your navbar height
+    const y = ref.current.getBoundingClientRect().top + window.scrollY - navbarHeight;
 
     window.scrollTo({
       top: y,
@@ -40,14 +41,15 @@ export const FloatingNav = ({ navItems, className }) => {
       )}
     >
       {navItems.map((navItem, idx) => (
-        <a
+        <button
           key={idx}
           onClick={() => scrollToSection(navItem.ref)}
           className={cn(
             "flex items-center justify-center gap-2",
             "text-neutral-600 dark:text-neutral-50",
             "hover:text-neutral-500 dark:hover:text-neutral-300",
-            "transition-colors duration-200"
+            "transition-colors duration-200",
+            "cursor-pointer"
           )}
         >
           <span className="flex items-center justify-center">
@@ -56,7 +58,7 @@ export const FloatingNav = ({ navItems, className }) => {
           <span className="hidden sm:block text-sm font-medium">
             {navItem.name}
           </span>
-        </a>
+        </button>
       ))}
     </motion.div>
   );

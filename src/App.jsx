@@ -4,13 +4,21 @@ import Footer from "./frontend/footer/Footer";
 import Hero from "./frontend/hero/Hero";
 import Navbar from "./frontend/navbar/Navbar";
 import SmoothScroll from "./frontend/components/ui/smooth-scroll";
+import SkillsSection from "./frontend/skills/Skill";
+import Experience from "./frontend/experience/Experience";
+import Project from "./frontend/projects/Project";
+import AboutMe from "./frontend/aboutme/AboutMe";
+import Testimonials from "./frontend/testimonials/Testimonials";
 
 function App() {
   // 🔹 SECTION REFS
   const heroRef = useRef(null);
   const aboutRef = useRef(null);
+  const skillsRef = useRef(null);
+  const experienceRef = useRef(null);
+  const projectsRef = useRef(null);
+  const testimonialsRef = useRef(null);
   const contactRef = useRef(null);
-
 
   return (
     <div style={{ position: "relative", minHeight: "100vh" }}>
@@ -33,19 +41,43 @@ function App() {
             sections={{
               home: heroRef,
               about: aboutRef,
+              skills: skillsRef,
+              experience: experienceRef,
+              projects: projectsRef,
+              testimonials: testimonialsRef,
               contact: contactRef,
             }}
           />
 
-          {/* 👇 Attach refs */}
+          {/* 👇 Hero Section */}
           <div ref={heroRef}>
             <Hero />
           </div>
 
-          <div ref={aboutRef}>
-            {/* This is wherever your About/Experience lives */}
-          </div>
+          {/* 👇 All Sections with reduced spacing */}
+          <section className="space-y-16">
+            <div ref={skillsRef}>
+              <SkillsSection />
+            </div>
 
+            <div ref={experienceRef}>
+              <Experience />
+            </div>
+
+            <div ref={projectsRef}>
+              <Project />
+            </div>
+
+            <div ref={aboutRef}>
+              <AboutMe />
+            </div>
+
+            <div ref={testimonialsRef}>
+              <Testimonials />
+            </div>
+          </section>
+
+          {/* 👇 Footer/Contact */}
           <div ref={contactRef}>
             <Footer />
           </div>
