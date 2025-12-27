@@ -39,7 +39,7 @@ const Navbar = ({ sections }) => {
         top: "20px",
         left: "50%",
         transform: "translateX(-50%)",
-        zIndex: 1000,
+        zIndex: 9999,
         width: "calc(100% - 4rem)",
         maxWidth: "1400px",
         display: "flex",
@@ -47,6 +47,7 @@ const Navbar = ({ sections }) => {
         justifyContent: "space-between",
         gap: "1rem",
         transition: "all 0.3s cubic-bezier(0.4, 0, 0.2, 1)",
+        pointerEvents: "auto",
       }}
     >
       {/* Main Navbar Container */}

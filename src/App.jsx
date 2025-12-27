@@ -22,7 +22,7 @@ function App() {
 
   return (
     <div style={{ position: "relative", minHeight: "100vh" }}>
-      {/* Background */}
+      {/* Background - Layer 1 */}
       <div
         style={{
           position: "fixed",
@@ -33,22 +33,22 @@ function App() {
         <Background />
       </div>
 
-      {/* Content */}
+      {/* Navbar - Layer 3 (OUTSIDE SmoothScroll) */}
+      <Navbar
+        sections={{
+          home: heroRef,
+          about: aboutRef,
+          skills: skillsRef,
+          experience: experienceRef,
+          projects: projectsRef,
+          testimonials: testimonialsRef,
+          contact: contactRef,
+        }}
+      />
+
+      {/* Content - Layer 2 */}
       <SmoothScroll>
         <div style={{ position: "relative", zIndex: 1 }}>
-          {/* 👇 Pass refs to Navbar */}
-          <Navbar
-            sections={{
-              home: heroRef,
-              about: aboutRef,
-              skills: skillsRef,
-              experience: experienceRef,
-              projects: projectsRef,
-              testimonials: testimonialsRef,
-              contact: contactRef,
-            }}
-          />
-
           {/* 👇 Hero Section */}
           <div ref={heroRef}>
             <Hero />
