@@ -27,6 +27,7 @@ const Navbar = ({ sections }) => {
 
   const navItems = [
     { name: "Skills", key: "skills" },
+    { name: "Experience", key: "experience" },
     { name: "Projects", key: "projects" },
     { name: "About Me", key: "about" },
     { name: "Testimonials", key: "testimonials" },
