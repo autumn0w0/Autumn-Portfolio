@@ -20,10 +20,21 @@ const Navbar = ({ sections }) => {
   }, []);
 
   // Smooth scroll to section
-  const scrollToSection = (sectionRef, sectionName) => {
-    setActiveSection(sectionName);
-    sectionRef.current?.scrollIntoView({ behavior: "smooth" });
-  };
+// Smooth scroll to section (FIXED for SmoothScroll)
+const scrollToSection = (sectionRef, sectionName) => {
+  if (!sectionRef?.current) return;
+
+  setActiveSection(sectionName);
+
+  const y =
+    sectionRef.current.getBoundingClientRect().top + window.scrollY;
+
+  window.scrollTo({
+    top: y,
+    behavior: "smooth",
+  });
+};
+
 
   const navItems = [
     { name: "Skills", key: "skills" },
